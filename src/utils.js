@@ -29,7 +29,7 @@ function findHandler(handlers, method, url, body, parameters) {
 }
 
 function isBodyOrParametersMatching(method, body, parameters, required) {
-  if (method === 'get') {
+  if (method.toLowerCase() === 'get') {
     var params = required ? required.params : undefined;
     return isParametersMatching(parameters, params);
   } else {
